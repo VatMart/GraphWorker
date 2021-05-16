@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="GraphWorker">
+    <output-path>$PROJECT_DIR$/out/artifacts/GraphWorker</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="root.GraphWorkerApplication" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/main/resources/GraphWorkerItems/iconstage1png.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="GraphWorker.jar">
+        <element id="module-output" name="GraphWorker" />
+      </element>
+      <element id="library" level="project" name="Maven: com.jfoenix:jfoenix:8.0.10" />
+      <element id="artifact" artifact-name="GraphWorker:jar" />
+    </root>
+  </artifact>
+</component>

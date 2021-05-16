@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GraphWorker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GraphWorker_jar</output-path>
+    <root id="archive" name="GraphWorker.jar">
+      <element id="module-output" name="GraphWorker" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/8.0.10/jfoenix-8.0.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,29 @@
+private void createTopByMouseHandler() {
+		// TODO
+		class RightPaneOnMouseClicked implements EventHandler<MouseEvent> {
+			@Override
+			public void handle(MouseEvent event) {
+				for (Entry<Integer, Top> entryTop : getTops().entrySet()) {
+					double xCenter = entryTop.getValue().getTopCircle().getCenterX();
+					double yCenter = entryTop.getValue().getTopCircle().getCenterY();
+					if (Math.pow((event.getX() - xCenter),
+							2) <= Math.pow(entryTop.getValue().getTopCircle().getRadius(), 2)
+									+ Math.pow((event.getY() - yCenter), 2)
+							&& Math.pow((event.getY() - yCenter),
+									2) <= Math.pow(entryTop.getValue().getTopCircle().getRadius(), 2)
+											- Math.pow((event.getX() - xCenter), 2)) {
+						// System.out.println("MISSED!");
+						return;
+					}
+				}
+				if (event.getClickCount() == 2 && event.getButton() == MouseButton.PRIMARY) {
+					addTop(solveNumberOfTop(), event.getX(), event.getY());
+					// spinnerQuanityTops.getValueFactory().setValue(spinnerQuanityTops.getValue() +
+					// 1);
+				}
+			}
+		}
+		EventHandler<MouseEvent> rightPaneOnMouseClicked = new RightPaneOnMouseClicked();
+		getNodeHandlers().add(getRightPane(), rightPaneOnMouseClicked, MouseEvent.MOUSE_CLICKED);
+		getRightPane().addEventHandler(MouseEvent.MOUSE_CLICKED, rightPaneOnMouseClicked);
+	}
